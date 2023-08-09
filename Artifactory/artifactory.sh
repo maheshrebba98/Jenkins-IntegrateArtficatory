@@ -14,27 +14,27 @@ systemctl start artifactory.service
 systemctl enable artifactory.service
 systemctl status artifactory.service
 
-############# by default stored files in artifactory --> artifacts
+       ############# by default stored files in artifactory --> artifacts in JFrog
 
 # Login into Artifactory Server <public-ip:8081> --> Give user: admin password: password
-  # Change Password: Mahesh@1234
-  # Check logout and login again
-  # create a new user in JFrog as User: ciadmin & password: Admin@1234 and give administrative permissions --> save it
-
-# go to Jenkins Server Console --> Manage Jenkins --> Plugins --> available Plugins --> type: Artifactory --> install
-# Manage Jenkins --> System --> JFrog --> Instance id : JFrog or Artifactory & Artifactory of URL : http://3.87.6.10:8082 
-# --> Give Username : ciadmin Password: Admin@1234 from JFrog created new User and Test it
-# Manage Jenkins --> Tools --> Maven ---> add --> Select version --> 3.8.8 --> Save
+   # Change Password: Mahesh@1234
+   # Check logout and login again
+   # create a new user in JFrog as User: ciadmin & password: Admin@1234 and give administrative permissions --> save it
+# Install "Artifactory" plug-in:
+   # go to Jenkins Server Console --> Manage Jenkins --> Plugins --> available Plugins --> type: Artifactory --> install
+   # Manage Jenkins --> System --> JFrog --> Instance id : JFrog or Artifactory & Artifactory of URL : http://3.87.6.10:8082 
+   # --> Give Username : ciadmin Password: Admin@1234 from JFrog created new User and Test it
+   # Manage Jenkins --> Tools --> Maven ---> add --> Select version --> 3.8.8 --> Save
 
 ########
 # 1...Create one Maven Project --> git is : https://github.com/maheshrebba98/hello-world.git --> Pre Steps --> Build: pom.xml & Goals: clean install or clean package
     # Add Post Build Actions : Deploy to Artifacts to Artifactory --> refresh repositories --> select: lib-release-local & lib-snapshot-local --> save 
 
-   # Finally Build it and check it from build console or jfrog console.
+    # Finally Build it and check it from build console or jfrog console.
 #########
 
 # 2...Create one Freestyle Project --> git is : https://github.com/maheshrebba98/hello-world.git --> Build Environment -->  
     # Maven3-Artifactory Integration: --> refresh repositories --> select: lib-release-local & lib-snapshot-local --> 
     # Add Build Steps: Invoke Artifactory Maven 3 --> Maven Name: Maven3, Root POM: pom.xml & Goals: clean install or clean package --> save 
 
-   # Finally Build it and check it from build console or jfrog console.
+    # Finally Build it and check it from build console or jfrog console.
