@@ -46,6 +46,9 @@ For Latest version of Artifactory Pro [download it from here](https://jfrog.com/
 ## Not able to start Artifactory services?
  Make sure You meet the Artifactory [system requirements](https://www.jfrog.com/confluence/display/JFROG/System+Requirements)
 
+
+#  Pls go through link : https://youtu.be/BVxhLIfunmI 
+
 ---
 ---
 
