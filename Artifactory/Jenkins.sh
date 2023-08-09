@@ -6,7 +6,7 @@ yum install git java-1.8.0-openjdk -y
 # vi .bash_profile ------> find / -name java
 # export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.20.0.8-1.amzn2.0.1.x86_64
 # PATH=$PATH:$JAVA_HOME:$HOME/bin
-# su -
+# sudo su -
 # echo $PATH
 
 #STEP-2: GETTING THE REPO (jenkins.io --> download -- > redhat)
@@ -23,7 +23,7 @@ systemctl start jenkins.service
 systemctl status jenkins.service
 
 ##################
-# Login into Jenkins <public_ip:8080> --> install plugins --> setup --> Manage Jenkins --> global tool config --> JDK --> 
+# Login into Jenkins <public_ip:8080> --> install plugins --> setup --> Manage Jenkins --> tools  --> JDK --> 
    # Name : Java
    # JAVA_HOME: /usr/lib/jvm/java-11-openjdk-11.0.20.0.8-1.amzn2.0.1.x86_64
    # Apply and Save
