@@ -6,7 +6,7 @@ yum install git java-1.8.0-openjdk -y
 # vi .bash_profile ------> find / -name java
 # export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.20.0.8-1.amzn2.0.1.x86_64
 # PATH=$PATH:$JAVA_HOME:$HOME/bin
-# sudo su -
+# su -
 # echo $PATH
 
 #STEP-2: GETTING THE REPO (jenkins.io --> download -- > redhat)
